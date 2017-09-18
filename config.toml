@@ -1,0 +1,7 @@
+baseurl = "https://lowpassfilter.netlify.com/"
+languageCode = "ja"
+title = "Low Pass Filter"
+
+[params]
+description = "同人サークル「Low Pass Filter」のページ"
+buildDrafts = true
