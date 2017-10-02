@@ -1,0 +1,10 @@
+{{ partial "header.html" }}
+
+<div class="list-group col-sm-6">
+  <h3 class="page-header">{{ .Title }}</h3>
+  {{ range .Pages }}
+  {{ .Render "list"}}
+  {{ end }}
+</div>
+
+{{ partial "footer.html" }}

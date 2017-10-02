@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+<h3 class="page-header">活動紹介</h1>
+<p>同人サークル「Low Pass Filter」</p>
+<p>不定期で同人活動を行っています。</p>
+
+{{ range (.Site.GetPage "section" "products").Pages }}
+<div class="row">
+  {{ .Render "products" }}
+</div>
+{{ end }}
+
+{{ partial "footer.html" . }}

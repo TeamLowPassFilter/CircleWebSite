@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <header class="entry-header">
+	<h3 class="entry-title">{{ .Title }}</h3>
+      </header>
+
+      <div class="entry-content" style="display: block; position: relative; overflow: hidden">
+	<img class="img-thumbnail" style="max-width: 80%" src="{{ .Site.BaseURL }}/{{ .Params.thumbnail }}">
+	{{ if .Params.soldout }}
+	<span class="soldout">Sold Out</span>
+	{{ end }}
+      </div>
+    </div><!-- /.col-sm- -->
+    <div class="col-md-6 col-sm-12">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+
+{{ partial "footer.html" . }}
