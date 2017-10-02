@@ -1,0 +1,10 @@
+{{ partial "header.html" . }}
+
+<h3>作品リスト</h3>
+<div class="list-group col-sm-6">
+  {{ range sort .Pages "Date" "asc" }}
+  {{ .Render "list" }}
+  {{ end }}
+</div>
+
+{{ partial "footer.html" . }}

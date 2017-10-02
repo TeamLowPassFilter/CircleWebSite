@@ -1,0 +1,6 @@
+<a class="list-group-item list-group-item-action" href="{{ .URL }}">
+{{ .Title }}
+{{ with .Params.subtitle }}
+<span>  </span>{{ . }}
+{{ end }}
+</a>

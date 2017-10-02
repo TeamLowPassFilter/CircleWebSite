@@ -1,5 +1,12 @@
 body {
+    font-family: "Rounded Mplus 1c";
     padding-top: 50px;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("images/bg_004.jpg");
+    background-size: cover;
 }
 .navbar-fixed-top {
     border: 0;
@@ -39,8 +46,36 @@ body {
     color: #fff;
     background-color: #428bca;
 }
-.main {
-    background-image: url("bg02.jpg")
+/* novel */
+div.novel {
+    font-family: 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'HGP明朝B', serif;
+    -webkit-font-feature-settings: 'pkna';
+    font-feature-settings: 'pkna';
+    font-size: 17px
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+    margin-top: 5px;
+    overflow-x: scroll;
 }
-
-
+.novel {
+    background-color: white;
+}
+.novel p {
+    text-indent: 1em;
+}
+.soldout {
+    width: 150px;
+    padding: 4px 10px;
+    background: #d43131;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: -37px;
+    text-transform: uppercase;
+    transform: rotate(315deg);
+}

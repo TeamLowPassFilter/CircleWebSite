@@ -1,16 +1,14 @@
 {{ partial "header.html" . }}
 
-<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-  <article>
-    <header class="entry-header">
-      <span class="entry-date">{{ .Date.Format "2017/09/19" }}</span>
-      <h1 class="entry-title">{{ .Title }}</h1>
-    </header>
+<article>
+  <header class="entry-header">
+    <span class="entry-date">{{ .Date.Format "2006/01/02" }}</span>
+    <h1 class="entry-title">{{ .Title }}</h1>
+  </header>
 
-    <div class="entry-content">
-      <p>{{ .Content }}</p>
-    </div>
-  </article>
-</div>
+  <div class="entry-content">
+    <p>{{ .Content }}</p>
+  </div>
+</article>
 
 {{ partial "footer.html" . }}

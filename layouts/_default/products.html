@@ -1,0 +1,24 @@
+
+<div class="col-sm-6 col-md-4">
+  <div class="thumbnail">
+    <a href="{{ .URL }}">
+      <img class="img-thumbnail" src="{{ .Params.thumbnail }}" width=200px>
+    </a>
+    <div class="caption">
+      <h3>{{ .Title }}</h3>
+      <ul class="list-unstyled">
+	<li>
+	{{ range .Params.tags }}
+	<span>{{ . }}</span>
+	{{ end }}
+	</li>
+	<li>
+	{{ range .Keywords }}
+	<span>{{ . }}</span>
+	{{ end }}
+	</li>
+	<li>{{ .Summary }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
