@@ -4,7 +4,6 @@
   <header class="entry-header">
     <span class="entry-date">{{ .Date.Format "2006/01/02" }}</span>
     <h1 class="entry-title">{{ .Title }}</h1>
-    <script type="text/javascript" src="https://rawgit.com/padolsey-archive/jquery.fn/master/cross-domain-ajax/jquery.xdomainajax.js"></script>
   </header>
 
   <div class="entry-content">
@@ -17,8 +16,7 @@
     </thead>
     <tbody id="tb"></tbody>
   </table>
-  <script type="text/javascript" src="../yamafu.js"></script>
   </div>
 </article>
 
-{{ partial "footer.html" . }}
+{{ partial "yamafu_footer.html" . }}
