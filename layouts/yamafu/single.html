@@ -8,11 +8,13 @@
 
   <div class="entry-content">
     <p>{{ .Content }}</p>
-  <table class="table">
-    <thead class="thead-inverse">
-      <th>Date</th>
-      <th>Leader</th>
-      <th>Win</th>
+  <table class="table table-bordered table-hover" style="background: white">
+    <thead>
+      <tr class="active">
+	<th>Date</th>
+	<th>Leader</th>
+	<th>Win</th>
+      </tr>
     </thead>
     <tbody id="tb"></tbody>
   </table>
