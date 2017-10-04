@@ -9,5 +9,5 @@ categories = []
 ↓書き散らかしている場所
 
 * [小説家になろう](http://mypage.syosetu.com/348603/)
-* [pixiv](https://www.pixiv.net/member.php?id=60427)
+* [pixiv](https://www.pixiv.net/novel/member.php?id=60427)
 * [カクヨム](https://kakuyomu.jp/users/seizansou)
