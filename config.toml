@@ -1,4 +1,4 @@
-baseurl = "https://lowpassfilter.netlify.com/"
+baseURL = "https://low-pass-filter.com/"
 languageCode = "ja"
 title = "Low Pass Filter"
 
