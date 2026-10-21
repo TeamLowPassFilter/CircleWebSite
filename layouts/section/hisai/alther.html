@@ -1,7 +1,3 @@
 {{ partial "header.html" . }}
-
-{{ range .Pages }}
-<p>{{ .Render "list" }}</p>
-{{ end }}
-
+{{ partial "section-links.html" . }}
 {{ partial "footer.html" . }}

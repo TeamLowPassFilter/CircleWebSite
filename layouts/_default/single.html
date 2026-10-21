@@ -1,14 +1,8 @@
 {{ partial "header.html" . }}
 
-<article>
-  <header class="entry-header">
-    <span class="entry-date">{{ .Date.Format "2006/01/02" }}</span>
-    <h1 class="entry-title">{{ .Title }}</h1>
-  </header>
-
-  <div class="entry-content">
-    <p>{{ .Content }}</p>
-  </div>
+<article class="page-content">
+  <h1>{{ .Title }}</h1>
+  <div class="entry-content">{{ .Content }}</div>
 </article>
 
 {{ partial "footer.html" . }}

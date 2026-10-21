@@ -5,11 +5,11 @@ subtitle = "Chapter2"
 slug = "chapter2"
 prev = "chapter1"
 next = "chapter3"
-draft = true
+draft = false
 keywords = []
 tags = []
 categories = []
-thumbnail = "images/no_image.png"
+thumbnail = "images/no_image.svg"
 +++
 
 

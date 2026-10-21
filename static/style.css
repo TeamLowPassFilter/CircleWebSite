@@ -1,81 +1,118 @@
+:root {
+  color-scheme: light;
+  --ink: #222a35;
+  --muted: #596474;
+  --paper: rgba(255, 255, 255, .96);
+  --line: #dce2e8;
+  --accent: #264f75;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-    font-family: "Rounded Mplus 1c";
-    padding-top: 50px;
-    height: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-image: url("images/bg_004.jpg");
-    background-size: cover;
+  margin: 0;
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  line-height: 1.75;
+  background: #e9eef2 url("images/bg_004.jpg") center / cover fixed;
 }
-.navbar-fixed-top {
-    border: 0;
+a { color: var(--accent); }
+a:hover { text-decoration-thickness: 2px; }
+img { max-width: 100%; height: auto; }
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4rem;
+  padding: .7rem max(1.25rem, calc((100vw - 1200px) / 2));
+  background: #172536;
+  color: #fff;
 }
-.sidebar {
-    display: none;
+.site-header a { color: #fff; text-decoration: none; }
+.site-brand { font-size: 1.2rem; font-weight: 700; letter-spacing: .03em; }
+.site-header-link { font-size: .9rem; }
+.site-shell {
+  display: grid;
+  grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  align-items: start;
 }
-@media (min-width: 768px) {
-    .sidebar {
-        position: fixed;
-        top: 51px;
-        bottom: 0;
-        left: 0;
-        z-index: 1000;
-        display: block;
-        padding: 20px;
-        overflow-x: hidden;
-        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-        background-color: #f5f5f5;
-        border-right: 1px solid #eee;
-    }
+.member-nav, .main {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: .7rem;
+  box-shadow: 0 8px 24px rgba(22, 38, 52, .08);
 }
-
-/* Sidebar navigation */
-.nav-sidebar {
-    margin-right: -21px; /* 20px padding + 1px border */
-    margin-bottom: 20px;
-    margin-left: -20px;
+.member-nav { padding: 1.25rem; }
+.member-nav h2 { font-size: 1rem; margin: 0 0 .75rem; }
+.member-nav ul { list-style: none; margin: 0; padding: 0; }
+.member-nav li + li { border-top: 1px solid var(--line); }
+.member-nav a, .member-nav span { display: block; padding: .55rem .25rem; }
+.member-nav span { color: var(--muted); }
+.main { min-width: 0; padding: clamp(1.25rem, 4vw, 3rem); }
+.main--novel { grid-column: 1 / -1; }
+h1, h2, h3 { line-height: 1.35; }
+h1 { margin-top: 0; font-size: clamp(1.7rem, 4vw, 2.3rem); }
+h2 { font-size: 1.35rem; }
+.intro { padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
+.intro h2 { font-size: 1.05rem; color: var(--muted); }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
 }
-.nav-sidebar > li > a {
-    padding-right: 20px;
-    padding-left: 20px;
+.product-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  background: #fff;
 }
-.nav-sidebar > .active > a,
-.nav-sidebar > .active > a:hover,
-.nav-sidebar > .active > a:focus {
-    color: #fff;
-    background-color: #428bca;
+.product-card-image { display: block; background: #f3f5f7; }
+.product-card-image img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; }
+.product-card-content { padding: 1rem; }
+.product-card h3 { margin: 0 0 .5rem; font-size: 1.1rem; }
+.product-meta { margin: .25rem 0; color: var(--muted); font-size: .9rem; }
+.availability { display: inline-block; padding: .2rem .6rem; background: #7e2832; color: #fff; border-radius: .2rem; font-size: .85rem; }
+.product-detail-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; }
+.product-detail-image { background: #f3f5f7; text-align: center; padding: 1rem; }
+.link-list { display: grid; gap: .6rem; margin-top: 1.5rem; }
+.link-list a { display: block; padding: .8rem 1rem; border: 1px solid var(--line); border-radius: .3rem; text-decoration: none; background: #fff; }
+.link-list a:hover { background: #f0f5f9; }
+.entry-content { overflow-wrap: anywhere; }
+.entry-content p { margin: 0 0 1rem; }
+.table-scroll { overflow-x: auto; }
+.records-table { width: 100%; border-collapse: collapse; background: #fff; }
+.records-table th, .records-table td { padding: .5rem .75rem; border: 1px solid var(--line); text-align: left; }
+.records-table th { background: #eef2f6; }
+.chapter-nav { display: flex; flex-wrap: wrap; gap: 1rem; margin: 0 0 1rem; }
+.novel-heading { margin-bottom: 1.5rem; }
+.novel-heading h1 { margin-bottom: 0; }
+.novel-heading p { margin: .2rem 0; color: var(--muted); }
+.novel-text {
+  height: min(72vh, 760px);
+  min-height: 300px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1.5rem;
+  margin: 0 0 1.5rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  writing-mode: vertical-rl;
+  font-family: "Yu Mincho", YuMincho, "Hiragino Mincho ProN", serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  letter-spacing: .03em;
 }
-/* novel */
-div.novel {
-    font-family: 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'HGP明朝B', serif;
-    -webkit-font-feature-settings: 'pkna';
-    font-feature-settings: 'pkna';
-    font-size: 17px
-    -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    line-height: 1.9;
-    letter-spacing: 0.03em;
-    margin-top: 5px;
-    overflow-x: scroll;
-}
-.novel {
-    background-color: white;
-}
-.novel p {
-    text-indent: 1em;
-}
-.soldout {
-    width: 150px;
-    padding: 4px 10px;
-    background: #d43131;
-    color: #fff;
-    text-align: center;
-    display: inline-block;
-    position: absolute;
-    top: 30px;
-    left: -37px;
-    text-transform: uppercase;
-    transform: rotate(315deg);
+.novel-text p { text-indent: 1em; margin: 0 0 1em; }
+@media (max-width: 700px) {
+  body { background-attachment: scroll; }
+  .site-shell { display: flex; flex-direction: column; gap: 1rem; margin: 1rem auto; }
+  .member-nav, .main { width: 100%; }
+  .member-nav ul { display: flex; flex-wrap: wrap; gap: .25rem .75rem; }
+  .member-nav li + li { border: 0; }
+  .product-detail-body { grid-template-columns: 1fr; }
+  .novel-text { height: auto; min-height: 0; max-height: none; overflow: visible; writing-mode: horizontal-tb; }
 }

@@ -1,24 +1,15 @@
 {{ partial "header.html" . }}
 
-<article>
-  <header class="entry-header">
-    <span class="entry-date">{{ .Date.Format "2006/01/02" }}</span>
-    <h1 class="entry-title">{{ .Title }}</h1>
-  </header>
-
-  <div class="entry-content">
-    <p>{{ .Content }}</p>
-  <table class="table table-bordered table-hover" style="background: white">
-    <thead>
-      <tr class="active">
-	<th>Date</th>
-	<th>Leader</th>
-	<th>Win</th>
-      </tr>
-    </thead>
-    <tbody id="tb"></tbody>
-  </table>
+<article class="page-content">
+  <h1>{{ .Title }}</h1>
+  <div class="entry-content">{{ .Content }}</div>
+  <div class="table-scroll">
+    <table class="records-table">
+      <thead><tr><th>Date</th><th>Leader</th><th>Win</th></tr></thead>
+      <tbody id="tb"></tbody>
+    </table>
   </div>
+  <p id="records-status" role="status"></p>
 </article>
 
 {{ partial "yamafu_footer.html" . }}

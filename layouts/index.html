@@ -1,13 +1,19 @@
 {{ partial "header.html" . }}
 
-<h3 class="page-header">活動紹介</h1>
-<p>同人サークル「Low Pass Filter」</p>
-<p>不定期で同人活動を行っています。</p>
+<section id="activities" class="intro">
+  <h1>Low Pass Filter</h1>
+  <h2>活動紹介</h2>
+  <p>同人サークル「Low Pass Filter」</p>
+  <p>不定期で同人活動を行っています。</p>
+</section>
 
-{{ range (.Site.GetPage "section" "products").Pages }}
-<div class="row">
-  {{ .Render "products" }}
-</div>
-{{ end }}
+<section aria-labelledby="products-heading">
+  <h2 id="products-heading">作品</h2>
+  <div class="product-grid">
+    {{ range where .Site.RegularPages "Section" "products" }}
+      {{ .Render "products" }}
+    {{ end }}
+  </div>
+</section>
 
 {{ partial "footer.html" . }}

@@ -4,11 +4,11 @@ title = "九王女学園　演劇部！"
 subtitle = "エピローグ"
 slug = "epilogue"
 prev = "chapter6"
-draft = true
+draft = false
 keywords = []
 tags = []
 categories = []
-thumbnail = "images/no_image.png"
+thumbnail = "images/no_image.svg"
 +++
 
 

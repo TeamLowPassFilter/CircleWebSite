@@ -3,11 +3,11 @@ date = 2017-10-02T02:04:35+09:00
 title = "光空のアルテール"
 subtitle = "エピローグ"
 slug = "epilogue"
-draft = true
+draft = false
 keywords = []
 tags = []
 categories = []
-thumbnail = "images/no_image.png"
+thumbnail = "images/no_image.svg"
 prev = "chapter6"
 +++
 

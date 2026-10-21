@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+
+<section class="page-content">
+  <h1>{{ .Title }}</h1>
+  <div class="product-grid">
+    {{ range .RegularPages.ByDate.Reverse }}
+      {{ .Render "products" }}
+    {{ end }}
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
