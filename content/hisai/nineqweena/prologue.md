@@ -3,11 +3,11 @@ date = 2017-10-02T13:33:26+09:00
 title = "九王女学園　演劇部！"
 subtitle = "プロローグ"
 slug = "prologue"
-draft = true
+draft = false
 keywords = []
 tags = []
 categories = []
-thumbnail = "images/no_image.png"
+thumbnail = "images/no_image.svg"
 next = "chapter1"
 +++
 

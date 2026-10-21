@@ -1,34 +1,21 @@
 {{ partial "content_header.html" . }}
 
-<style type="text/css">
-  div.row { background-color: white; }
-</style>
-
-<div id="main_article">
-{{ .Content }}
-</div>
-
-{{ with .Params.next }}
-<p style="text-align: right"><a href="../{{ . }}">次へ</a></p>
-{{ end }}
-
-</div>
-<div class="col-sm-10 col-md-1">
-
-  <div class="novel" style="overflow: hidden">
-    <h3 style="margin: 5px">{{ .Title }}</h3>
-    {{ with .Params.subtitle }}
-    <h4 style="margin: 5px">{{ . }}</h4>
-    {{ end }}
-  </div>
-  <span class="align-right">
-    {{ with .Params.next }}
-    <a href="../{{ . }}"> Next </a>|
-    {{ end }}
-    <a href="../.."> List </a>
-    {{ with .Params.prev }}
-    |<a href="../{{ . }}"> Prev </a>
-    {{ end }}
-  </span>
+<article class="novel-page">
+  <nav class="chapter-nav" aria-label="章の移動">
+    <a href="{{ .CurrentSection.RelPermalink }}">作品一覧</a>
+    {{ with .Params.prev }}<a href="{{ printf "%s%s/" $.CurrentSection.RelPermalink . }}">前へ</a>{{ end }}
+    {{ with .Params.next }}<a href="{{ printf "%s%s/" $.CurrentSection.RelPermalink . }}">次へ</a>{{ end }}
+  </nav>
+  <header class="novel-heading">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p>{{ . }}</p>{{ end }}
+  </header>
+  <div class="novel-text">{{ .Content }}</div>
+  <nav class="chapter-nav" aria-label="章の移動">
+    <a href="{{ .CurrentSection.RelPermalink }}">作品一覧</a>
+    {{ with .Params.prev }}<a href="{{ printf "%s%s/" $.CurrentSection.RelPermalink . }}">前へ</a>{{ end }}
+    {{ with .Params.next }}<a href="{{ printf "%s%s/" $.CurrentSection.RelPermalink . }}">次へ</a>{{ end }}
+  </nav>
+</article>
 
 {{ partial "content_footer.html" . }}

@@ -5,11 +5,11 @@ subtitle = "Chapter1"
 slug = "chapter1"
 prev = "prologue"
 next = "chapter2"
-draft = true
+draft = false
 keywords = []
 tags = []
 categories = []
-thumbnail = "images/no_image.png"
+thumbnail = "images/no_image.svg"
 +++
 
 この学園はやっぱり変な学園だ。

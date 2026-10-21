@@ -1,0 +1,21 @@
+<section class="page-content">
+  {{ if ne .RelPermalink ("/hisai/" | relURL) }}
+    {{ if eq .Section "hisai" }}<p><a href="{{ "/hisai/" | relURL }}">← 久井の作品</a></p>{{ end }}
+  {{ end }}
+  <h1>{{ if eq .RelPermalink ("/hisai/" | relURL) }}久井の作品{{ else }}{{ .Title }}{{ end }}</h1>
+  {{ with .Content }}<div class="entry-content">{{ . }}</div>{{ end }}
+  {{ if .Sections }}
+    <div class="link-list">
+      {{ range .Sections.ByTitle }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ end }}
+    </div>
+  {{ end }}
+  {{ if .RegularPages }}
+    <div class="link-list">
+      {{ range .RegularPages.ByDate }}
+        <a href="{{ .RelPermalink }}">{{ with .Params.subtitle }}{{ . }}{{ else }}{{ .Title }}{{ end }}</a>
+      {{ end }}
+    </div>
+  {{ end }}
+</section>

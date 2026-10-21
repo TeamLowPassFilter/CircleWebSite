@@ -3,11 +3,11 @@ date = 2017-10-02T02:04:10+09:00
 title = "光空のアルテール"
 subtitle = "Chapter5"
 slug = "chapter5"
-draft = true
+draft = false
 keywords = []
 tags = []
 categories = []
-thumbnail = "images/no_image.png"
+thumbnail = "images/no_image.svg"
 prev = "chapter4"
 next = "chapter6"
 +++

@@ -1,7 +1,7 @@
 +++
 date = 2017-10-02T19:12:43+09:00
 title = "Teiga"
-draft = true
+draft = false
 keywords = []
 tags = []
 categories = []
