@@ -7,11 +7,13 @@
     {{ with .Params.next }}<a href="{{ printf "%s%s/" $.CurrentSection.RelPermalink . }}">次へ</a>{{ end }}
   </nav>
   <header class="novel-heading">
+    <p class="eyebrow">STORY / {{ .CurrentSection.Title }}</p>
     <h1>{{ .Title }}</h1>
-    {{ with .Params.subtitle }}<p>{{ . }}</p>{{ end }}
+    {{ with .Params.subtitle }}<p class="novel-subtitle">{{ . }}</p>{{ end }}
   </header>
-  <div class="novel-text">{{ .Content }}</div>
-  <nav class="chapter-nav" aria-label="章の移動">
+  <p class="reading-hint">本文は横にスクロールして読み進められます。</p>
+  <div class="novel-text" tabindex="0" role="region" aria-label="{{ .Title }} {{ .Params.subtitle }}の本文">{{ .Content }}</div>
+  <nav class="chapter-nav chapter-nav--bottom" aria-label="次の章">
     <a href="{{ .CurrentSection.RelPermalink }}">作品一覧</a>
     {{ with .Params.prev }}<a href="{{ printf "%s%s/" $.CurrentSection.RelPermalink . }}">前へ</a>{{ end }}
     {{ with .Params.next }}<a href="{{ printf "%s%s/" $.CurrentSection.RelPermalink . }}">次へ</a>{{ end }}

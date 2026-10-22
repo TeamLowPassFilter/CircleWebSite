@@ -1,4 +1,11 @@
 <header class="site-header">
-  <a class="site-brand" href="{{ .Site.Home.RelPermalink }}">Low Pass Filter</a>
-  <a class="site-header-link" href="{{ .Site.Home.RelPermalink }}#activities">活動紹介</a>
+  <a class="site-brand" href="{{ .Site.Home.RelPermalink }}">
+    <span class="site-brand-label">同人サークル</span>
+    <span>Low Pass Filter</span>
+  </a>
+  <nav class="site-top-nav" aria-label="サイト案内">
+    <a href="{{ .Site.Home.RelPermalink }}#activities">活動紹介</a>
+    <a href="{{ .Site.Home.RelPermalink }}#products">作品</a>
+    <a href="{{ .Site.Home.RelPermalink }}#members">メンバー</a>
+  </nav>
 </header>
