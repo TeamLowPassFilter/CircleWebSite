@@ -107,8 +107,8 @@ h2 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
 .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 225px), 1fr)); gap: 1.2rem; }
 .product-card { overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--line); background: #fff; transition: transform .2s ease, box-shadow .2s ease; }
 .product-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(30,40,45,.09); }
-.product-card-image { display: grid; place-items: center; min-height: 0; aspect-ratio: 1.45; background: #eee9e2; }
-.product-card-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.product-card-image { position: relative; display: block; overflow: hidden; aspect-ratio: 1.15; background: #eee9e2; }
+.product-card-image img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
 .product-card-content { display: flex; flex-direction: column; flex: 1; padding: 1rem 1.15rem 1.2rem; }
 .product-card h3 { margin: .2rem 0 .55rem; font-size: 1.05rem; }
 .product-card h3 a { color: var(--ink); text-decoration: none; }
