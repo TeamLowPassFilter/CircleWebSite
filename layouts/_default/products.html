@@ -3,10 +3,9 @@
     <img src="{{ printf "/%s" .Params.thumbnail | relURL }}" alt="{{ .Title }}の表紙" loading="lazy">
   </a>
   <div class="product-card-content">
+    <p class="product-meta">{{ with .Params.tags }}{{ delimit . "・" }}{{ end }}{{ with .Keywords }} / {{ delimit . "・" }}{{ end }}</p>
     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    {{ with .Params.tags }}<p class="product-meta">{{ delimit . "・" }}</p>{{ end }}
-    {{ with .Keywords }}<p class="product-meta">{{ delimit . "・" }}</p>{{ end }}
-    {{ with .Summary }}<p>{{ . }}</p>{{ end }}
+    {{ with .Summary }}<p class="product-summary">{{ . }}</p>{{ end }}
     {{ if .Params.soldout }}<p class="availability">頒布終了</p>{{ end }}
   </div>
 </article>
