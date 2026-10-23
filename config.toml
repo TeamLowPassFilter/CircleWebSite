@@ -1,6 +1,7 @@
 baseURL = "https://lowpassfilter.netlify.app/"
 languageCode = "ja"
 title = "Low Pass Filter"
+enableRobotsTXT = true
 
 [params]
 description = "同人サークル「Low Pass Filter」のページ"
