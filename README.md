@@ -23,5 +23,5 @@
 ## セキュリティ
 
 - `netlify.toml` のレスポンスヘッダーでCSP、HTTPS接続の維持、クリックジャッキング防止、MIME判定防止、リファラー制御、不要なブラウザー権限の停止を設定します。
-- yamafuの記録表はGoogle Sheets APIを使用します。現在のAPIキーはブラウザー用JavaScriptとGit履歴に公開されています。Google Cloud側でキーをローテーションし、利用APIを **Google Sheets API** のみに、利用元を **https://lowpassfilter.netlify.app** とその配下に制限してください。Deploy Previewで記録表も確認する場合は、そのプレビューURLを一時的に許可してください。
+- yamafuの記録表はGoogle Sheets APIを使用します。現在のAPIキーはブラウザー用JavaScriptとGit履歴に公開されています。Google Cloud側でキーをローテーションし、`static/js/yamafu.js` のキーも新しい値に更新してください。利用APIを **Google Sheets API** のみに、利用元を **https://lowpassfilter.netlify.app** とその配下に制限してください。Deploy Previewで記録表も確認する場合は、そのプレビューURLを一時的に許可してください。
 - ブラウザーから使うAPIキーは新しい値にしても閲覧者に見えます。利用元とAPIの制限が必要です。
